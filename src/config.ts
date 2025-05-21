@@ -28,14 +28,12 @@ import Recommend27 from "./assets/recommendImage/27.webp";
 import Recommend28 from "./assets/recommendImage/28.webp";
 import Recommend29 from "./assets/recommendImage/29.webp";
 import MenuDesk from "./assets/menuDesk/MenuDesk.jpg";
-import MenuMob1 from "./assets/menuMob/MenuMob1.webp";
-import MenuMob2 from "./assets/menuMob/MenuMob2.webp";
-import MenuMob3 from "./assets/menuMob/MenuMob3.webp";
-import MenuMob4 from "./assets/menuMob/MenuMob4.webp";
 import Logo from "./assets/logo.png";
 import Line from "./assets/socialIcon/line.svg";
 import Facebook from "./assets/socialIcon/facebook.svg";
 import Tiktok from "./assets/socialIcon/tiktok.svg";
+import wheel from "./assets/wheel.png";
+
 
 // 1.ใส่โลโก้
 export const logo = Logo;
@@ -223,6 +221,7 @@ export const recommendMenuItems = [
   },
 ];
 
+//ใส่ Icon วงล้อ
 export const segment: string[] = [
   "🌴",
   "🌴",
@@ -243,7 +242,6 @@ export const segment: string[] = [
 // 3.ใส่รูปเมนูอาหาร
 export const menuImage = {
   desktop: [MenuDesk],
-  tablet: [MenuMob1, MenuMob2, MenuMob3, MenuMob4],
   mobile: [MenuDesk],
 };
 
@@ -265,3 +263,23 @@ export const contact = [
     link: "https://www.tiktok.com/@superbeach1?_t=8rhyTgawumY&_r=1",
   },
 ];
+
+
+const hexToRgba = (hex: string, alpha: number) => {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
+
+export const wheelOptionColors = {
+  //Icon วงล้อ
+  imgSrc: wheel,
+  //สีขอบวงล้อ
+  wheelFrame: "#F8FAFC",
+  //สีกลางวงล้อ
+  centerCircleBG: "#CF2921",
+  //สีวงล้อ
+  segColors : [hexToRgba("#111827", 1), hexToRgba("#E2E8F0", 1)]
+};

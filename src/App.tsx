@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import RecommendedMenu from "./components/RecommendMenu";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
-// import BodyBG from "./assets/BodyBg.png";
 import order from "./assets/order.svg";
 import { contact } from "./config";
 

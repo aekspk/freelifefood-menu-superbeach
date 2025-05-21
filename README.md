@@ -49,3 +49,7 @@ export default tseslint.config({
 })
 ```
 # freelife-card-menu
+ื1.รัน npm i
+2.รัน npm run dev (สำหรับ start project)
+3.รัน npm run build (สำหรับ build)
+4.รัน npx serve dist (สำหรับ start production)

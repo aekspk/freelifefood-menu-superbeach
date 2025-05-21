@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import {wheelOptionColors} from "../config"
 
 export interface WheelComponentProps {
   segments: string[];
@@ -20,8 +21,8 @@ export interface WheelComponentProps {
 }
 
 const wheelColors = {
-  wheelFrame: "#F8FAFC",
-  centerCircleBG: "#CF2921",
+  wheelFrame: wheelOptionColors.wheelFrame,
+  centerCircleBG: wheelOptionColors.centerCircleBG,
 };
 
 const WheelComponent = ({
@@ -328,14 +329,6 @@ const WheelComponent = ({
       ctx.fillText(currentSegment, centerX + 10, centerY + size + 50);
     }
   };
-
-  // const clear = () => {
-  //   if (!canvasContext) {
-  //     return false;
-  //   }
-  //   const ctx = canvasContext;
-  //   ctx.clearRect(0, 0, dimension, dimension);
-  // };
 
   const clear = () => {
     if (canvasContext) {

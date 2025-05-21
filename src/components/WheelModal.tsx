@@ -2,6 +2,7 @@ import WheelComponent from "./Wheel";
 import { recommendMenuItems, segment } from "../config";
 import confetti from "canvas-confetti";
 import { useState } from "react";
+import {wheelOptionColors} from "../config"
 
 interface PromotionModalProps {
   isOpen: boolean;
@@ -17,24 +18,13 @@ function WheelModal({
   setImgSrc,
   setIsOpenWinnerMenuModal,
 }: PromotionModalProps) {
-  // const segments = [
-  //   ...recommendMenuItems.map((item) =>
-  //     lang === "TH" ? `${item.text.TH}` : `${item.text.EN}`
-  //   ),
-  // ];
 
   const [disabledClose, setDisabledClose] = useState(false);
 
   // const segments = [...recommendMenuItems.map((item) => item.segment)];
   const segments: string[] = segment;
-  const hexToRgba = (hex: string, alpha: number) => {
-    const r = parseInt(hex.slice(1, 3), 16);
-    const g = parseInt(hex.slice(3, 5), 16);
-    const b = parseInt(hex.slice(5, 7), 16);
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-  };
 
-  const segColors = [hexToRgba("#111827", 1), hexToRgba("#E2E8F0", 1)];
+  const segColors = wheelOptionColors.segColors;
 
   const onFinished = () => {
     // const winnerMenu = recommendMenuItems.find(
